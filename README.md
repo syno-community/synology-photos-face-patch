@@ -19,7 +19,7 @@ Synology Photos Facial Recognition Patch
 As of V1.6.0-0629, the file was updated from libsynophoto-plugin-**model**.so to libsynophoto-plugin-**platform**.so
 
 ```bash
-wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/download/libsynophoto-plugin-platform.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-platform.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
+wget https://github.com/syno-community/synology-photos-face-patch/releases/latest/download/libsynophoto-plugin-platform.so -O /var/packages/SynologyPhotos/target/usr/lib/libsynophoto-plugin-platform.so && synopkgctl stop SynologyPhotos && synopkgctl start SynologyPhotos
 ```
 
 ### Choice2
@@ -29,7 +29,7 @@ wget https://github.com/jinlife/Synology_Photos_Face_Patch/releases/latest/downl
 3. Please change 'jinlife' to your own account.
 4. Restart Photos after patch.
 ```bash
-cp /volume1/homes/jinlife/libsynophoto-plugin-platform.so /var/packages/SynologyPhotos/target/usr/lib/ 
+cp /volume1/homes/syno-community/libsynophoto-plugin-platform.so /var/packages/SynologyPhotos/target/usr/lib/ 
 ```
 If the libsynophoto-plugin-platform.so doesn't work, please try libsynophoto-plugin-platform.so.1.0 with same steps.
 Or I would recommend to patch it by yourself, please take a look at [link](/bin)
@@ -37,7 +37,7 @@ Or I would recommend to patch it by yourself, please take a look at [link](/bin)
 ## Misc (libsynosdk.so.7)
 The patch for libsynosdk.so.7 will allow remote NFS/CIFS shared folder be used in VideoStation, AudioStation and Photos etc.
 ```bash
-cp /volume1/homes/jinlife/libsynosdk.so.7 /usr/lib/
+cp /volume1/homes/syno-community/libsynosdk.so.7 /usr/lib/
 ```
 #### Note: 
 1. It has side effect for FileStation that you cannot eject the folder anymore, it will be treated as local folder, however you can still umount it.
